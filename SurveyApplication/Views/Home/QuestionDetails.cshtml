@@ -1,0 +1,31 @@
+﻿@model SurveyApplication.Models.Questions
+
+@{ ViewData["Title"] = "QuestionDetails"; }
+
+<h1>QuestionDetails</h1>
+
+<div>
+
+    <hr />
+
+    <h3> @Model.Name</h3>
+
+    @foreach (Options result in @Model.ListOption)
+    {
+        // <input style="color:black" type="radio" id="@result.OptionId"  value="@result.Name" /><br />
+<label style="padding-right:50px"><input name="TourGuideId" id="@result.OptionId" type="radio" value="@result.Name" /> @result.Name </label>
+                
+   <br />
+    }
+
+</div>
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model.QuestionId">Edit</a> |*@
+    <input type="submit" class="btn btn-info" value="Yeni secenek ekleyin" onclick="location.href='@Url.Action("createOption", "Home", new { QuestionId = @Model.QuestionId})'" />
+
+    <input type="submit" class="btn btn-info" value="Yeni soru ekleyin" onclick="location.href='@Url.Action("createQuestion", "Home" , new { SurveyId = @Model.SurveyId})'" />
+    <input type="submit" class="btn btn-info" value="Anketi bitir" onclick="location.href='@Url.Action("ListofQuestion", "Home", new { SurveyId = @Model.SurveyId})'" />
+
+    <input type="submit" class="btn btn-info" value="Anketi Gönder" onclick="location.href='@Url.Action("Contact", "Home")'" />
+
+</div>

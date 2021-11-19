@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h1>Contact</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 m-auto">
+            <div class="contact-form">
+                <form asp-controller="Home" asp-action="Contact">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="name-input">
+                                <input type="text" name="Adi" required placeholder="Ad">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="email-input">
+                                <input type="text" name="Soyadi" required placeholder="Soyadı">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="website-input">
+                                <input type="email" name="Email" required placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="subject-input">
+                                <input type="text" name="Konu" required placeholder="İçerik">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-input">
+                        <textarea name="Mesaj" cols="30" rows="10" required placeholder="Mesaj"></textarea>
+                    </div>
+                    <div class="input-submit">
+                        <button type="submit">Mesaj Gönder</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="back" class="mb-2 text-center">
+    @if (ViewBag.Succes != null)
+    {
+        <h5 class="text-success">@ViewBag.Succes</h5>
+    }
+    @if (ViewBag.Error != null)
+    {
+        <h5 class="text-danger">@ViewBag.Error</h5>
+    }
+</div>

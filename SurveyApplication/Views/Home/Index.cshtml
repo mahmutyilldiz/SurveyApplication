@@ -1,0 +1,62 @@
+﻿@{ ViewData["Title"] = "Home Page"; }
+@model SurveyApplication.Models.Survey
+<!doctype html>
+<html lang="tr">
+<head>
+
+
+
+</head>
+
+<body class="play" ng-app="myApp" ng-cloak>
+
+    <div class="container">
+        <div class="enter_quiz">
+            <div class="all_ads top_ad">
+
+                <div class="ad_box">
+
+                </div>
+
+            </div>
+
+            <h1>Hoşgeldiniz:)</h1>
+
+            <h2 class="heading">
+                Arkadaşlarınız sizi ne kadar iyi tanıyor?
+            </h2>
+
+            <div>
+
+                @*<a asp-action="/Home/createQuestion" asp-route-id="@Model.SurveyId">Edit</a> |*@
+                @*<input type="submit" class="btn btn-info" value="Yeni secenek ekleyin" onclick="location.href='@Url.Action("createOption", "Home", new { QuestionId = @Model.SurveyId})'" />*@
+
+
+                <a>
+                    <input type="button" id="Btn-Anket" onclick="location.href='@Url.Action("createQuestion", "Home", new { SurveyId = @Model.SurveyId})'" class="btn btn-lg btn-success btn-block"  value="<<<ANKETİNİ OLUSTUR>>>" />
+                </a>
+                <br />
+
+                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">
+                    <input type="button" id="Btn-Anket" class="btn btn-lg btn-success btn-block" value="<<<GİRİS YAP>>" />
+                </a>
+                <br />
+                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Register">
+                    <input type="button" id="Btn-Anket" class="btn btn-lg btn-success btn-block" value="<<<ÜYE OL>>" />
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://tr.holaquiz.com/public/js/jquery.min.js?v=20211001"></script>
+    <script type="text/javascript" src="https://tr.holaquiz.com/public/js/bootstrap.js?v=20211001"></script>
+    <script type="text/javascript" src="https://tr.holaquiz.com/public/js/angular.js?v=20211001"></script>
+    <script type="text/javascript" src="https://tr.holaquiz.com/public/js/angular-sanitize.js?v=20211001"></script>
+    <script type="text/javascript" src="https://tr.holaquiz.com/public/js/s_a_cont.js?v=20211001"></script>
+    <script type="text/javascript" src="https://tr.holaquiz.com/public/js/s_a_ser.js?v=20211001"></script>
+    <script type="text/javascript" src="https://tr.holaquiz.com/public/js/site.js?v=20211001"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Yildiz Anket</title>
+    <link rel="shortcut icon" type="image/png" href="https://tr.holaquiz.com/public/images/Hola_Favicon.png">
+    <meta name="description" content="Bu arkadaşlığımızın testi. Bir quiz oluşturun, arkadaşlarınızla paylaşın, cevap vermelerini ve sonuçları görmelerini sağlayın." />
+    <meta name="keywords" content="Bu,arkadaşlığımızın,testi,Bir,quiz,oluşturun,arkadaşlarınızla,paylaşın,cevap,vermelerini,ve,sonuçları,görmelerini,sağlayın" />
+    <meta name="author" content="" />
+    <meta property="og:site_name" content="https://tr.holaquiz.com" />
+    <meta property="og:url" content="https://tr.holaquiz.com/arkada%C5%9Flar%C4%B1n%C4%B1z-sizi-ne-kadar-iyi-tan%C4%B1yor/play/15?utm_site_source=start&utm_site_medium=home&utm_site_campaign=user" />
+    <meta property="og:title" content="Arkadaşların seni ne kadar tanıyor? HolaQuiz'inizi oluşturun!" />
+    <meta property="og:description" content="Bu arkadaşlığımızın testi. Bir quiz oluşturun, arkadaşlarınızla paylaşın, cevap vermelerini ve sonuçları görmelerini sağlayın." />
+    <meta property="snapchat:sticker" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://img.holaquiz.com/public/site_content/quiz/ck_editor/images/meta/TurkishFriend.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="420">
+    <meta name="twitter:card" content="photo" />
+    <meta property="twitter:url" content="https://tr.holaquiz.com/arkada%C5%9Flar%C4%B1n%C4%B1z-sizi-ne-kadar-iyi-tan%C4%B1yor/play/15?utm_site_source=start&utm_site_medium=home&utm_site_campaign=user" />
+    <meta name="twitter:title" content="Arkadaşların seni ne kadar tanıyor? HolaQuiz'inizi oluşturun!" />
+    <meta name="twitter:image" content="https://img.holaquiz.com/public/site_content/quiz/ck_editor/images/meta/TurkishFriend.jpg" />
+    <meta property="twitter:description" content="Bu arkadaşlığımızın testi. Bir quiz oluşturun, arkadaşlarınızla paylaşın, cevap vermelerini ve sonuçları görmelerini sağlayın." />
+    <link href="https://tr.holaquiz.com/public/css/font-awesome.css?v=20211007" rel="stylesheet" type="text/css" />
+    <link href="https://tr.holaquiz.com/public/css/bootstrap.css?v=20211007" rel="stylesheet" type="text/css" />
+    <link href="https://tr.holaquiz.com/public/css/style.css?v=20211007" rel="stylesheet" type="text/css" />
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+</head>
+<body>
+    <header>
+  
+        <nav class="navbar navbar-default navbar-static-top navbar-custom" role="navigation" ng-controller="headerController">
+
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="/home/index">
+                    <img src="https://tr.holaquiz.com/public/images/logo.png" alt="" width="200" height="41">
+                </a>
+
+                <button type="button" class="navbar-toggle" id="navbarToggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav  navbar-right">
+
+
+                    <li class="lang-selector">
+                        <!-- class="change-language" for new design changes, not ready yet -->
+                        <select class="" name="lang" onchange="changeLang(this)">
+
+                            <option value='tr' selected>Türkçe</option>
+
+                        </select>
+                    </li>
+
+                    <li><a href="/home/index">Hakkımızda</a></li>
+                    <li><a href="/home/index">SosyalMedya</a></li>
+                    <li><a href="/home/index">İletisim</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - MySurvey - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@model List<SurveyApplication.Models.Questions>
+
+@{ ViewData["Title"] = "QuestionDetails"; }
+
+
+<form >
+    <div>
+
+        <hr />
+
+
+
+
+        @foreach (Questions result in @Model)
+        {
+
+<h3> @result.Name</h3>
+
+                @foreach (Options option in result.ListOption)
+                {
+                    // <input style="color:black" type="radio" id="@result.OptionId"  value="@result.Name" /><br />
+<label style="padding-right:50px"><input name="@result.Name" id="@option.OptionId" type="radio" value="@option.Name" /> @option.Name </label>}}<br />
+        <input type="submit" class="btn btn-info" value="Anketi bitir" onclick="location.href='@Url.Action("SaveResult", "Home")'" />
+
+    </div>
+</form>

@@ -1,0 +1,30 @@
+﻿
+@model SurveyApplication.Models.Questions
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <form asp-action="createQuestion">
+        <h1 class="alert">Sorunuzu olusturunuz</h1>
+        <input type="hidden" asp-for="QuestionId">
+        <div class="navbar-collapse collapse">
+            <input type="hidden" asp-for="SurveyId" value="@ViewBag.SurveyId">
+            <label class="control-label">SORU:</label>
+            <br />
+            <input asp-for="Name" type="text" placeholder="sorunuzu girin" class="form-control" />
+            <br />
+
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Kaydet" href="/Home/createOption" class="btn btn-primary" />
+        </div>
+
+    </form>
+
+
+
+   
+</body>
+</html>

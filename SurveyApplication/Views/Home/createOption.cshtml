@@ -1,0 +1,33 @@
+﻿
+@model SurveyApplication.Models.Options
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <h1>seceneklerinizi olusturunuz</h1>
+
+    <form asp-action="createOption">
+
+
+        <input type="hidden" asp-for="QuestionId" value="@ViewBag.QuestionId">
+  
+        <div class="navbar-collapse collapse">
+
+            <label class="control-label">Seçenek:</label>
+            <br />
+            <input asp-for="Name" type="text" class="form-control" width="50" />
+            <br />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Kaydet" class="btn btn-primary" />
+        </div>
+        @*<a asp-action="createOption">Yeni seçenek ekle</a>*@
+    </form>
+
+
+</body>
+</html>
